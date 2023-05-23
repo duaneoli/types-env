@@ -1,8 +1,8 @@
 import { Logger } from '@duaneoli/logger'
 import * as Joi from 'types-joi'
 
-function createEnvironment<T>(environmentSchema: Joi.ObjectSchema<T>): NonNullable<T> {
-  const env: any = environmentSchema
+function createEnvironment<T = any>(environmentSchema: T): NonNullable<T> {
+  const env: any = Joi.object(environmentSchema as any)
   if (!env || !env['_ids'] || !env['_ids']['_byKey']) {
     Logger.error('EnvironmentSchema not defined')
     process.exit(1)
@@ -12,7 +12,7 @@ function createEnvironment<T>(environmentSchema: Joi.ObjectSchema<T>): NonNullab
     acc[it[0]] = process.env[it[0]]
     return acc
   }, {})
-  const envs: T = Joi.attempt(processEnv, environmentSchema)
+  const envs: T = Joi.attempt(processEnv, env)
   return envs as NonNullable<typeof envs>
 }
 

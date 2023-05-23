@@ -1,6 +1,6 @@
 {
   "name": "@duaneoli/types-env",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": "Duane Oliveira",
   "description": "Types end validador de variáveis de ambiente",
   "main": "dist/index.js",

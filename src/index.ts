@@ -11,8 +11,4 @@ const DefaultEnvironment = {
   redis: redisEnvironmentSchema,
 }
 
-export default {
-  CreateEnvironment,
-  DefaultEnvironment,
-  TypesJoi,
-}
+export { CreateEnvironment, DefaultEnvironment, TypesJoi }
