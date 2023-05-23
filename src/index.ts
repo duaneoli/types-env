@@ -1,3 +1,4 @@
+import * as TypesJoi from 'types-joi'
 import createEnvironment from './env'
 import databaseEnvironmentSchema from './schemas/DatabaseEnvironmentSchema'
 import genericEnvironmentSchema from './schemas/GenericEnvironmentSchema'
@@ -13,4 +14,5 @@ const DefaultEnvironment = {
 export default {
   CreateEnvironment,
   DefaultEnvironment,
+  TypesJoi,
 }

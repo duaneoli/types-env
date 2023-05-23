@@ -1,19 +1,16 @@
 {
   "name": "@duaneoli/types-env",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Duane Oliveira",
-  "description": "Padrão de logs, afim de tornar facil a identificação no grafana",
+  "description": "Types end validador de variáveis de ambiente",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/duaneoli/logger.git"
-  },
   "keywords": [
     "react",
     "typescript",
-    "logger",
-    "grafana"
+    "types",
+    "environment",
+    "env"
   ],
   "license": "MIT",
   "dependencies": {
@@ -71,8 +68,12 @@
       "last 1 safari version"
     ]
   },
-  "bugs": {
-    "url": "https://github.com/duaneoli/logger/issues"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/duaneoli/types-env.git"
   },
-  "homepage": "https://github.com/duaneoli/logger#readme"
+  "bugs": {
+    "url": "https://github.com/duaneoli/types-env/issues"
+  },
+  "homepage": "https://github.com/duaneoli/types-env#readme"
 }
