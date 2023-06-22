@@ -1,7 +1,7 @@
 import { Logger } from '@duaneoli/logger'
 import * as Joi from 'types-joi'
 
-function createEnvironment<T = any>(environmentSchema: T): NonNullable<T> {
+function createEnvironment<T>(environmentSchema: Joi.ObjectSchema<T>): NonNullable<T> {
   const env: any = Joi.object(environmentSchema as any)
   if (!env || !env['_ids'] || !env['_ids']['_byKey']) {
     Logger.error('EnvironmentSchema not defined')
