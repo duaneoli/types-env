@@ -1,6 +1,6 @@
 {
   "name": "@duaneoli/types-env",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "author": "Duane Oliveira",
   "description": "Types end validador de variáveis de ambiente",
   "main": "dist/index.js",
@@ -38,7 +38,8 @@
     "build": "rm -rf dist/ && tsc",
     "lint": "eslint \"{**/*,*}.{js,ts,jsx,tsx}\"",
     "commit": "npx git-cz",
-    "prettier": "prettier --write \"{src,tests,example/src}/**/*.{js,ts,jsx,tsx}\""
+    "prettier": "prettier --write \"{src,tests,example/src}/**/*.{js,ts,jsx,tsx}\"",
+    "publish": "yarn build && npm publish --access public"
   },
   "lint-staged": {
     "*.{js, jsx}": [
